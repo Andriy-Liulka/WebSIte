@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Liulka Andrii</title>
+    <style>
+        .generalGridStyle{
+            display: flex;
+            width: 1400px; 
+            min-height: 800px;
+            background-color: lightgrey; 
+            position:absolute;
+            margin: 100px 10% 400px 10%; 
+            box-shadow: 20px -20px 50px teal,1px -1px 50px teal;
+        }
+        .gridConteiner{
+            display:grid;
+            font-family: 'Times New Roman', Times, serif;
+            width: 840px;
+            margin: 10px 10px 10px 10px;
+            grid-template-rows: 30px 100px 100px 100px;
+        }
+        .gridConteiner > div{
+            text-align: center;
+            
+        }
+
+        .item1{
+            font-size: 30px;
+            opacity: 0.5;
+            text-transform:uppercase;
+        }
+        .item2{
+            font-size: 35px;
+        }
+        .item3{
+            font-size: 30px;
+        }
+        .item4{
+            font-size: 20px;
+        }
+        .item5 {
+            display: grid;
+            grid-template-rows: 60px 60px 60px;
+        }
+        .item5 > div{
+            text-align: left;
+            font-size:25px;
+        }
+
+        .lastItemInItem5{
+            padding-top: 9px;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+<body style="position:relative">
+    <div style="background-image: linear-gradient(to right,red,yellow); height: 600px; width:100%; position:absolute">
+    </div>
+    <div class="generalGridStyle">
+        <div style="margin-top:10px; margin-left: 20px;"> <img src="img/13sh-vypusk_960.jpg" alt="" height="780px"></div>
+        <div class="gridConteiner">
+
+            <div class="item1">
+                <p>Hello everyone, I'm</p>
+            </div>
+
+            <div class="item2">
+                <h1>Andrii Liulka</h1>
+            </div>
+
+            <div class="item3">
+                <br>
+                <p>Junior .NET Developer</p>
+            </div>
+            <div class="item4">
+                <br>
+                <p>Have a little experience with ASP .NET Web Api Entity Framework Core 5</p>
+            </div>
+            <div class="item5">
+                <div style="display: flex;">
+                    <div><img src="img/Linkedinalt.png" alt="" height="50px"></div>
+                    <div class="lastItemInItem5"><a href="https://www.linkedin.com/in/andriy-liulka/" >Linkdin</a></div>
+                </div>
+                <div style="display: flex;">
+                    <div><img src="img/phones.png" alt="" height="50px"></div>
+                    <div class="lastItemInItem5"><span >+38-(068)-515-73-06</span></div>
+                </div>
+                <div style="display: flex;">
+                    <div><img src="img/w512h5121350249248email2.png" alt="" height="50px"></div>
+                    <div class="lastItemInItem5"><span >andriy0liulka@gmail.com</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

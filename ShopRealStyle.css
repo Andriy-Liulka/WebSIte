@@ -1,0 +1,37 @@
+.particular-item:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px 40px rgb(209, 46, 46);
+  overflow: visible;
+  content: attr(data-descr);
+}
+
+.particular-item {
+  overflow: hidden;
+  margin: 0.5rem 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid transparent;
+  transition: 400ms ease-out;
+}
+
+.particular-item::after {
+  content: attr(data-descr);
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  padding: 20% 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 1.5rem;
+  transition: 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.particular-item:hover::after {
+  top: 0%;
+}

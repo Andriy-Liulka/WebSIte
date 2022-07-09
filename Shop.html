@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Gallery Flexbox</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Montserrat, Arial, sans-serif;
+            font-weight: 500;
+        }
+        a {color: #0f1384;}
+        a:hover {color: #151abc;}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .row {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        [class*="column-"] {
+            padding-left: 15px;
+            padding-right: 15px;
+            min-width: 1px;
+            max-width: 100%;
+        }
+        .column-2 {
+            flex: 0 0 50%;
+        }
+        .column-3 {
+            flex: 0 0 33.33%;
+        }
+        .mb {margin-bottom: 20px;}
+        .text-center {text-align: center;}
+        .heading {
+            font-size: 3rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 3.5rem 0;
+            color: #1a1a1a;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-border { 
+            border: 4px solid #dbdbdb;
+            transition: .5s;
+        }
+        .tab:hover .img-border,.testimonial:hover .img-border,.img-border:hover {
+            border-color: #fff;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.38);
+        }
+        .btn {
+            display: inline-block;
+            height: 38px;
+            padding: 0 30px;
+            color: #fff;
+            text-align: center;
+            line-height: 38px;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #0f1384;
+            cursor: pointer;
+            transition: .5s;
+        }
+        .btn:hover {
+            background: #8488f8;
+            text-decoration: none;
+        }
+        .portfolio-item {
+            margin: .5rem 0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid transparent;
+            transition: 400ms ease-out;
+        }
+
+        .portfolio-item img {
+            display: block;
+            border: 4px solid #dbdbdb;
+            transition: 400ms ease-out;
+        }
+
+        .portfolio-item:hover {
+            border-color: #fff;
+            box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+            top:0%;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.15);
+        }
+        
+        .portfolio-item::after {
+            content: attr(data-descr);
+            display: block;
+            position: absolute;
+            left: 0;
+            top:100%;
+            width: 100%;
+            padding: 20% 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 1.5rem;
+            transition: 500ms ease-out 200ms;
+            pointer-events: none;
+        }
+        .portfolio-item:hover::after{
+            top: 20%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="heading">Our Works</h2>
+        <div class="row">
+            <div class="portfolio-item column-3" data-descr="Kitchen design">
+                <a href="https://source.unsplash.com/4a-xheeuZA0/800x800" target="_blank"><img class="img-fluid" src="https://source.unsplash.com/4a-xheeuZA0/500x500" alt="Kitchen design"></a>
+            </div>
+            <div class="portfolio-item column-3" data-descr="Terrace design">
+                <a href="https://source.unsplash.com/00fCk2lZn1c/700x900" target="_blank"><img class="img-fluid" src="https://source.unsplash.com/00fCk2lZn1c/500x500" alt="Terrace design"></a>
+            </div>
+            <div class="portfolio-item column-3" data-descr="Wooden house design" target="_blank">
+                <a href="https://source.unsplash.com/7MAaRjiGH7I/800x800"><img class="img-fluid" src="https://source.unsplash.com/7MAaRjiGH7I/500x500" alt="Wooden house design"></a>
+            </div>
+            <div class="portfolio-item column-3" data-descr="White home design">
+                <a href="https://source.unsplash.com/X5BWooeO4Cw/700x800" target="_blank"><img class="img-fluid" src="https://source.unsplash.com/X5BWooeO4Cw/500x500" alt="White home design"></a>
+            </div>
+            <div class="portfolio-item column-3" data-descr="Cafe design">
+                <a href="https://source.unsplash.com/AYdJM-HiSUM/1000x700" target="_blank"><img class="img-fluid" src="https://source.unsplash.com/AYdJM-HiSUM/500x500" alt="Cafe design"></a>
+            </div>
+            <div class="portfolio-item column-3" data-descr="Bedroom design">
+                <a href="https://source.unsplash.com/WzmzPT_sRzw/800x800" target="_blank"><img class="img-fluid" src="https://source.unsplash.com/WzmzPT_sRzw/500x500" alt="Bedroom design"></a>
+            </div>
+            
+        </div>
+        <p class="text-center">
+                <a class="btn" href="http://html-plus.in.ua/img-from-unsplash-used-in-html-pages/">How to use unsplash.com photos</a>
+            </p>
+        <p class="text-center"><a href="index.html" class="btn">Back to home</a></p>
+    </div>
+
+</body>
+
+</html>

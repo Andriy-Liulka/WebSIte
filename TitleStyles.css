@@ -1,0 +1,90 @@
+.headerStyle {
+  font-size: 20px;
+}
+
+.generalHeaderStyle {
+  background-color: #212529;
+}
+
+.headerStyle :hover {
+  font-size: 22px;
+  background-color: red;
+  transition-duration: 0.5s;
+  text-decoration: black;
+}
+
+.headerDivStyle {
+  background-image: url("/img/good-wallpapers-11.jpg");
+  background-attachment: fixed;
+  height: 850px;
+}
+
+.navStyle {
+  max-height: 60px;
+}
+
+.eachElement {
+  box-shadow: 0px 0px 3px 3px rgb(95, 87, 87);
+}
+
+.underPictureElementStyle :hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 780px) {
+  .generalHeaderStyle {
+    height: 300px;
+    width: 200px;
+  }
+  .footerFlexStyle {
+    display: block;
+    width: 200px;
+  }
+}
+
+.averageElementStyle {
+  margin-top: 100px;
+}
+
+footer {
+  height: 700px;
+  background-image: url(img/Moon.png);
+  filter: grayscale(0.8);
+}
+
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: red;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footerGridStyle {
+  grid-template-columns: 100px 100px 100px;
+}
+
+.eachColumnStyle {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.cameFromLeftStyle {
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.cameFromRightStyle {
+  transform: translateX(600px);
+  opacity: 0;
+  transition: 1s all ease;
+}
